@@ -1,4 +1,4 @@
-# Rune API
+# Rune Developer API
 
 #### For extending the functionality of [Rune](https://havoc.app/package/rune)
 
@@ -18,7 +18,7 @@ Requirements: [Theos](https://theos.dev/docs/installation)
 
 ![Screenshot of a successful compilation](https://github.com/iCrazeiOS/RuneAPI/assets/39101269/4b0b714b-6e25-4da9-b0a7-1cb49a16ff71)
 
-![Screenshot of Rune's panel list](https://github.com/iCrazeiOS/RuneAPI/assets/39101269/50aded23-ca76-4864-8b67-0b2840fae036)
+![Screenshot of Rune's panel list](https://github.com/iCrazeiOS/RuneAPI/assets/39101269/478ff06f-54bc-46d3-bb3f-2fa627e0ce87)
 
 After enabling the plugin, you should see its panel show up within Rune.
 
