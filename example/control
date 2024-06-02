@@ -1,0 +1,9 @@
+Name: HelloRune
+Package: com.icraze.hellorune
+Description: HelloRune
+Author: iCraze
+Maintainer: iCraze
+Version: 1.0
+Architecture: iphoneos-arm
+Section: Tweaks
+Depends: com.icraze.rune
