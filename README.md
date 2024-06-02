@@ -23,3 +23,36 @@ Requirements: [Theos](https://theos.dev/docs/installation)
 After enabling the plugin, you should see its panel show up within Rune.
 
 ![Screenshot of the plugin in action](https://github.com/iCrazeiOS/RuneAPI/assets/39101269/638fe62d-3741-4607-b5ab-188d610ffed0)
+
+
+## Programming
+
+Now that you have a plugin set up, you can edit `Tweak.x` to build your UI and add functionality.
+
+The `plugin-gen.sh` script creates a subclass of BBRBasePanelView for you automatically. This is the class that you should use to build your panel.
+
+The `didMoveToWindow` method is called when the panel is (re)loaded by Rune. Use this to set up your panel's UI and any other initialisation code.
+
+As each plugin is a Substrate tweak, you can hook methods just like you would in any other tweak.
+
+
+## NSNotificationCenter
+
+Rune uses NSNotificationCenter to communicate with plugins. You can listen for notifications by adding an observer in your panel's `didMoveToWindow` method.
+
+Here is an example of how to listen for the `com.icraze.rune-opened` notification, to call a method named `updatePanel` whenever Rune is presented:
+
+```objc
+[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(updatePanel) name:@"com.icraze.rune-opened" object:nil];
+```
+
+Available notifications:
+
+`com.icraze.rune-opened` - Fired when Rune is presented
+
+`com.icraze.rune-closed` - Fired when Rune is dismissed
+
+
+## Other Info
+
+The `icon` field within the plugin's plist must be the name of an [SF Symbol](https://developer.apple.com/design/human-interface-guidelines/sf-symbols). Be sure to choose a symbol that is available on iOS 14 and above, as Rune supports these versions.
