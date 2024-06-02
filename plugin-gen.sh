@@ -43,7 +43,7 @@ if [[ "$plugin_identifier" != "${plugin_identifier%[[:space:]]*}" ]]; then
 fi
 
 echo "\nA class name prefix is used to avoid class name conflicts with other software."
-echo "It should be a unique string that is unlikely to be used by other software."
+echo "It should be a unique string that is unlikely to be used by other plugins."
 echo "For example, if your plugin is called 'MyRunePlugin', you could use 'MRP' as the class name prefix."
 read -p "Enter class name prefix: " class_name_prefix
 
