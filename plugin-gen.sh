@@ -42,7 +42,7 @@ if [[ "$plugin_identifier" != "${plugin_identifier%[[:space:]]*}" ]]; then
 	exit 1
 fi
 
-echo -e "\nA class name prefix is used to avoid class name conflicts with other software."
+printf "\nA class name prefix is used to avoid class name conflicts with other software.\n"
 echo "It should be a unique string that is unlikely to be used by other plugins."
 echo "For example, if your plugin is called 'MyRunePlugin', you could use 'MRP' as the class name prefix."
 read -p "Enter class name prefix: " class_name_prefix
@@ -140,4 +140,4 @@ cat > $plugin_directory/Resources/$plugin_name_no_spaces.plist <<EOF
 </plist>
 EOF
 
-echo -e "\nPlugin has been created in the '$plugin_directory' directory."
+printf "\nPlugin has been created in the '$plugin_directory' directory.\n"
